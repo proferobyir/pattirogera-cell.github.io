@@ -62,15 +62,24 @@
             padding-bottom: 8px;
         }
 
-        pre {
-            background-color: #1e1e1e;
-            border: 1px solid #3c3c3c;
-            border-radius: 5px;
-            padding: 15px;
-            overflow-x: auto;
-            font-family: 'Consolas', 'Courier New', Courier, monospace;
-            font-size: 14px;
-        }
+       pre {
+    background: #fffdfd;
+    border: 3px solid #fc0101; /* Reducido un poco para evitar que roba tanto espacio lateral */
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 100%;         /* Fuerza a la caja a no superar el ancho del contenedor */
+    box-sizing: border-box;  /* Incluye el padding y bordes dentro del cálculo del 100% */
+    overflow-x: auto;        /* Habilita barra de desplazamiento horizontal si el código es muy largo */
+    white-space: pre-wrap;   /* Hace que las líneas largas bajen automáticamente en pantallas estrechas */
+    word-break: break-all;   /* Rompe palabras o rutas muy largas si es necesario */
+}
+
+code {
+    font-family: monospace;
+    color: #000000;
+    font-size: 11pt;         /* Ligeramente más pequeño que el texto normal para que el código encaje mejor */
+    word-break: break-word;
+}
 
         /* Coloreado de sintaxis simulado (Estilo VS Code / Visual Studio) */
         .kw { color: var(--keyword-color); font-weight: bold; } /* Keywords */
